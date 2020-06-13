@@ -1,38 +1,33 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
 
-bool prime(int x){
-    if(x==0){
-        return 0;
+long maxPrime(long n){
+    long maxprime=0;
+    while(n%2==0){
+        maxprime=2;
+        n=n/2;
     }
-    if(x==1){
-        return 0;
-    }
-    for(int i=2; i<=sqrt(x);i++){
-        if(x%i==0){
-            return 0;
+    for(int i=3;i<=sqrt(n);i+=2){
+        while(n%i==0){
+            maxprime=i;
+            n=n/i;
         }
     }
-    //reach till here then prime
-    return 1;
+    if(n>2){
+        maxprime=n;
+    }
+    return maxprime;
 }
 
 int main() {
 	//code
 	int t;
-	long n,ar[1000];
+	long n;
 	cin>>t;
 	while(t--){
 	    cin>>n;
-	    int j=0;
-        for(int i=2; i<=n/2;i++){
-            if(n%i==0){
-                ar[j++]=i;
-            }
-        }
-	    for(int i=j-1; i>0;i--){
-	        if(prime(ar[i])){
-	            cout<<ar[i]<<"\n";
-	        }
-	    }
+        cout<<maxPrime(n)<<"\n";
 	}
 	return 0;
 }
