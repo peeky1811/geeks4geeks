@@ -14,3 +14,9 @@ int arrangeCoins(int n){
   }
   return i;
 }
+
+int main(){
+  int n;
+  cin>>n;
+  cout<<arrangeCoins(n);
+}
