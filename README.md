@@ -1,5 +1,5 @@
 # geeks4geeks
-Here, I add my solutions to questions I have done on my own and not copied from the net. 
+Here, I add my solutions to questions from geeks for geeks. 
 
 I am preparing for my interviews, so I am doing questions I find on geeks for geeks.
 I am keeping a copy of my solutions for my reference. Otherwise I don't like to post my code on github.
