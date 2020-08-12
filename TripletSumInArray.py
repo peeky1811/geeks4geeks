@@ -15,9 +15,11 @@ for _ in range(int(input())):
     
 #---Clever approach---
 def tripletSum(arr, n, sum):
-    for i in range(0,n-2):
-        for j in range(i+1,n-1):
-                if sum-(arr[i]+arr[j]) in arr:
+    for i in range(0,n-1):
+    s=set()
+        for j in range(i+1,n):
+                if sum-(arr[i]+arr[j]) in s:
+                    # print(arr[i],arr[j],sum-(arr[i]+arr[j]))
                     print(1)
                     return
     print(0)
